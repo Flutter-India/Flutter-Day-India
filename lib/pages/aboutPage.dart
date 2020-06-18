@@ -6,9 +6,14 @@ import 'package:flutterdaysindia/utils/app_info.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class AboutPage extends StatelessWidget {
-  Widget gapbody = SizedBox(
-    height: 30.0,
-  );
+  Widget gapbody(BuildContext context) {
+    return SizedBox(
+      height: Responsiveness.isSmallScreen(context)
+          ? 30.0
+          : Responsiveness.isMediumScreen(context) ? 15.0 : 30.0,
+    );
+  }
+
   Widget gapHeader = SizedBox(
     height: 70.0,
   );
@@ -63,7 +68,7 @@ class AboutPage extends StatelessWidget {
                   fontSize: headerfont,
                 ),
               ),
-              gapbody,
+              gapbody(context),
               Padding(
                 padding: const EdgeInsets.only(right: 15.0),
                 child: RichText(
@@ -102,7 +107,7 @@ class AboutPage extends StatelessWidget {
                   "assets/images/svg/flutterdayIndia.svg",
                 ),
               ),
-              gapbody,
+              gapbody(context),
               Text(
                 "When and Where",
                 style: TextStyle(
@@ -110,7 +115,7 @@ class AboutPage extends StatelessWidget {
                   fontSize: Responsiveness.isSmallScreen(context) ? 25.0 : 55.0,
                 ),
               ),
-              gapbody,
+              gapbody(context),
               timeandloc(
                 iconData: Icons.access_time,
                 title: "3-hour starting from 10:30 am",
@@ -118,7 +123,7 @@ class AboutPage extends StatelessWidget {
                 textSize: 15.0,
                 gap: 15.0,
               ),
-              gapbody,
+              gapbody(context),
               timeandloc(
                   iconData: Icons.location_on,
                   title: "flutterindia.dev",
@@ -156,7 +161,7 @@ class AboutPage extends StatelessWidget {
                                   fontSize: headerfont,
                                 ),
                               ),
-                              gapbody,
+                              gapbody(context),
                               Padding(
                                 padding: const EdgeInsets.only(right: 15.0),
                                 child: RichText(
@@ -211,12 +216,12 @@ class AboutPage extends StatelessWidget {
                             Responsiveness.isSmallScreen(context) ? 25.0 : 55.0,
                       ),
                     ),
-                    gapbody,
+                    gapbody(context),
                     timeandloc(
                       iconData: Icons.access_time,
                       title: "3-hour starting from 10:30 am",
                     ),
-                    gapbody,
+                    gapbody(context),
                     timeandloc(
                       iconData: Icons.location_on,
                       title: "flutterindia.dev",
@@ -298,7 +303,9 @@ class studyWidget extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 300.0,
+              height: Responsiveness.isSmallScreen(context)
+                  ? 100
+                  : Responsiveness.isMediumScreen(context) ? 150.0 : 300,
               child: Image.asset(
                 "assets/animations/study.gif",
               ),
@@ -318,7 +325,7 @@ class studyWidget extends StatelessWidget {
       );
     } else {
       return Container(
-        height: MediaQuery.of(context).size.height / 3,
+        height: MediaQuery.of(context).size.height / 4,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           mainAxisSize: MainAxisSize.max,
