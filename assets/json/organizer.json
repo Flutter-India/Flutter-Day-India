@@ -79,5 +79,23 @@
     "facebook_handle": "https://www.facebook.com/fluttersurat",
     "meetup_handle": "https://www.meetup.com/FlutterSurat",
     "instagram_handle": ""
+  },
+  {
+    "organizer_name": "Flutter Kerala",
+    "small_description": "Building a group of flutter developers from kerala kochi",
+    "logo": "https://pbs.twimg.com/profile_images/1191533261651972096/dAt8HM1n_400x400.jpg",
+    "twitter_handle": "https://twitter.com/FlutterKerala",
+    "facebook_handle": "",
+    "meetup_handle": "",
+    "instagram_handle": ""
+  },
+  {
+    "organizer_name": "Flutter Kolkata",
+    "small_description": "",
+    "logo": "https://pbs.twimg.com/profile_images/1271744720654516224/eDlOUVfg_400x400.jpg",
+    "twitter_handle": "https://twitter.com/flutterkolkata",
+    "facebook_handle": "",
+    "meetup_handle": "",
+    "instagram_handle": ""
   }
 ]
