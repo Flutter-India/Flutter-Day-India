@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdaysindia/services/responsiveness.dart';
 import 'package:flutterdaysindia/utils/app_info.dart';
-
 import 'package:websafe_svg/websafe_svg.dart';
 
 class PoweredBy extends StatelessWidget {
+  gdgPowerRes(BuildContext context) {
+    if (Responsiveness.isSmallScreen(context))
+      return 12.0;
+    else if (Responsiveness.isMediumScreen(context))
+      return 40.0;
+    else {
+      return 0.0;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +23,7 @@ class PoweredBy extends StatelessWidget {
           Text(
             'Powered by',
             style: TextStyle(
-              fontSize: 65.0,
+              fontSize: Responsiveness.isSmallScreen(context) ? 30.0 : 65.0,
               fontFamily: AppInfo.textFont,
               color: AppInfo.textColor,
             ),
@@ -21,9 +31,12 @@ class PoweredBy extends StatelessWidget {
           SizedBox(
             height: 60.0,
           ),
-          WebsafeSvg.asset(
-            AppInfo.gdgPower,
-            fit: BoxFit.scaleDown,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: gdgPowerRes(context)),
+            child: WebsafeSvg.asset(
+              AppInfo.gdgPower,
+              fit: BoxFit.scaleDown,
+            ),
           ),
         ],
       ),

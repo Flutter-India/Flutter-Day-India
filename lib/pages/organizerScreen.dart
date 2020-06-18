@@ -1,8 +1,8 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutterdaysindia/services/responsiveness.dart';
 import 'package:flutterdaysindia/widgets/organizerList.dart';
-
 
 class OrganizerScreen extends StatelessWidget {
   Widget gap = SizedBox(
@@ -17,7 +17,7 @@ class OrganizerScreen extends StatelessWidget {
           Text(
             "Organized by",
             style: TextStyle(
-              fontSize: 65.0,
+              fontSize: Responsiveness.isSmallScreen(context) ? 35.0 : 65.0,
               color: Colors.white,
             ),
           ),

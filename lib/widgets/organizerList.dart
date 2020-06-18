@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutterdaysindia/services/responsiveness.dart';
 import 'package:flutterdaysindia/utils/app_info.dart';
-
 
 import 'organizerhandle.dart';
 
@@ -19,17 +19,21 @@ class _OrganizerListState extends State<OrganizerList> {
   Widget gap = SizedBox(
     width: 15.0,
   );
+
   @override
   void initState() {
     super.initState();
+
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       String jsonData = await rootBundle.loadString(AppInfo.organizerjson);
       new_Data = json.decode(jsonData.toString());
       print(new_Data);
       widgets = List.generate(
-          9,
+          11,
           (index) => SizedBox(
-                width: MediaQuery.of(context).size.width * 0.3,
+                width: Responsiveness.isLargeScreen(context)
+                    ? MediaQuery.of(context).size.width * 0.3
+                    : MediaQuery.of(context).size.width,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +43,8 @@ class _OrganizerListState extends State<OrganizerList> {
                       new_Data[index]["organizer_name"],
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 35.0,
+                        fontSize:
+                            Responsiveness.isSmallScreen(context) ? 27.0 : 35.0,
                       ),
                     ),
                     SizedBox(
@@ -52,16 +57,14 @@ class _OrganizerListState extends State<OrganizerList> {
                         CircleAvatar(
                           backgroundImage: CircleLogo(new_Data[index]["logo"]),
                           backgroundColor: AppInfo.backgroundColor,
-                          radius: 35.0,
+                          radius: Responsiveness.isSmallScreen(context)
+                              ? 23.0
+                              : 35.0,
                         ),
-                        SizedBox(
-                          width: 15.0,
-                        ),
+                        gap,
                         OrganizerMeetup(
                             string: new_Data[index]["meetup_handle"]),
-                        SizedBox(
-                          width: 15.0,
-                        ),
+                        gap,
                         OrganizerTwitter(
                           string: new_Data[index]["twitter_handle"],
                         ),

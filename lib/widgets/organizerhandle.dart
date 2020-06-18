@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdaysindia/services/launchString.dart';
+import 'package:flutterdaysindia/services/responsiveness.dart';
 import 'package:flutterdaysindia/utils/app_info.dart';
 
 class OrganizerMeetup extends StatelessWidget {
@@ -21,7 +22,7 @@ class OrganizerMeetup extends StatelessWidget {
     return GestureDetector(
       onTap: () => Launch.launchUrl(string),
       child: CircleAvatar(
-        radius: 30.0,
+        radius: Responsiveness.isSmallScreen(context) ? 23.0 : 35.0,
         backgroundImage: AssetImage(
           AppInfo.meetupIcon,
         ),
@@ -50,7 +51,7 @@ class OrganizerTwitter extends StatelessWidget {
     return GestureDetector(
       onTap: () => Launch.launchUrl(string),
       child: CircleAvatar(
-        radius: 30.0,
+        radius: Responsiveness.isSmallScreen(context) ? 23.0 : 35.0,
         backgroundImage: AssetImage(
           AppInfo.twitterIcon,
         ),

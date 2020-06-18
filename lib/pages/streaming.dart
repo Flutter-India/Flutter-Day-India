@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdaysindia/services/launchString.dart';
-
+import 'package:flutterdaysindia/services/responsiveness.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import '../utils/app_info.dart';
@@ -8,18 +9,19 @@ import '../utils/app_info.dart';
 class Streaming extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double headerSize = Responsiveness.isSmallScreen(context) ? 25.0 : 45.0;
     return Container(
-      margin: EdgeInsets.only(top: 90.0),
+      margin: EdgeInsets.only(
+          top: Responsiveness.isSmallScreen(context) ? 45 : 90.0),
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
             'Streaming on',
-            style: TextStyle(
-              fontSize: 45.0,
+            style: GoogleFonts.leckerliOne(
+              fontSize: headerSize,
               color: Colors.white,
-              fontFamily: 'Rocky Billy',
             ),
           ),
           SizedBox(
@@ -27,17 +29,19 @@ class Streaming extends StatelessWidget {
           ),
           WebsafeSvg.asset(
             'assets/Images/svg/youtube.svg',
-            height: 110.0,
+            height: Responsiveness.isSmallScreen(context) ? 50.0 : 110.0,
           ),
           SizedBox(
             height: 70.0,
           ),
           ButtonTheme(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(13.0),
+              borderRadius: BorderRadius.circular(
+                  Responsiveness.isSmallScreen(context) ? 7.0 : 13.0),
             ),
-            height: 75.0,
-            padding: EdgeInsets.all(16.0),
+            height: Responsiveness.isSmallScreen(context) ? 27.0 : 75.0,
+            padding: EdgeInsets.all(
+                Responsiveness.isSmallScreen(context) ? 8.0 : 16.0),
             child: RaisedButton(
               color: Color(0xffFF0000),
               onPressed: () => Launch.launchUrl(
@@ -47,13 +51,13 @@ class Streaming extends StatelessWidget {
                 "Subscribe",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 45.0,
+                  fontSize: Responsiveness.isSmallScreen(context) ? 20.0 : 45.0,
                 ),
               ),
             ),
           ),
           SizedBox(
-            height: 110.0,
+            height: Responsiveness.isSmallScreen(context) ? 50.0 : 110.0,
           ),
         ],
       ),

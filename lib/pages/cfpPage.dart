@@ -1,61 +1,94 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutterdaysindia/services/launchString.dart';
+import 'package:flutterdaysindia/services/responsiveness.dart';
 import 'package:flutterdaysindia/utils/app_info.dart';
+import 'package:flutterdaysindia/widgets/cfpButton.dart';
 
 class CFPPage extends StatelessWidget {
   static String tag = "/CFPPage";
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height / 2,
-      width: MediaQuery.of(context).size.width,
-      child: Row(
+
+  SizedBox gap = SizedBox(
+    height: 50.0,
+  );
+
+  containerHeight({BuildContext context}) {
+    return Responsiveness.isSmallScreen(context)
+        ? MediaQuery.of(context).size.height / 1.5
+        : MediaQuery.of(context).size.height / 2;
+  }
+
+  Image cfpImage({BuildContext context}) {
+    return Image.asset(
+      "assets/animations/mypersonalLogo.gif",
+      width: MediaQuery.of(context).size.width / 2,
+    );
+  }
+
+  Text HeaderText({BuildContext context}) {
+    String text = Responsiveness.isSmallScreen(context)
+        ? "Speak at Flutter Day India"
+        : "Speak at\nFlutter Day India";
+    return Text(
+      text,
+      style: TextStyle(
+        fontFamily: AppInfo.textFont,
+        color: Colors.white,
+        fontSize: HeaderFont(context: context),
+      ),
+      textAlign: TextAlign.center,
+    );
+  }
+
+  double HeaderFont({BuildContext context}) {
+    if (Responsiveness.isLargeScreen(context)) {
+      return 70.0;
+    } else if (Responsiveness.isMediumScreen(context)) {
+      return 47.0;
+    } else if (Responsiveness.isSmallScreen(context)) {
+      return 23.0;
+    }
+  }
+
+  Widget cfpFormat(BuildContext context) {
+    if (!Responsiveness.isSmallScreen(context))
+      return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image.asset("assets/animations/mypersonalLogo.gif"),
-          Flexible(
+          cfpImage(context: context),
+          Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  "Call for Speaker",
-                  style: TextStyle(
-                    fontFamily: AppInfo.textFont,
-                    color: Colors.white,
-                    fontSize: 90.0,
-                  ),
+                HeaderText(context: context),
+                gap,
+                cfpButton(
+                  textSize: 25.0,
                 ),
-                SizedBox(
-                  height: 50.0,
-                ),
-                OutlineButton(
-                  onPressed: () => Launch.launchUrl(
-                    "https://sessionize.com/flutter-day-india",
-                  ),
-                  child: Text(
-                    "Call for Proposal",
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      color: Colors.white,
-                    ),
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(
-                      10.0,
-                    ),
-                  ),
-                  padding: EdgeInsets.all(16.0),
-                  borderSide: BorderSide(
-                    color: Colors.white,
-                    width: 4.0,
-                  ),
-                )
               ],
             ),
           ),
         ],
-      ),
+      );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        cfpImage(context: context),
+        Center(child: HeaderText(context: context)),
+        gap,
+        cfpButton(
+          textSize: 15.0,
+        ),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: containerHeight(context: context),
+      width: MediaQuery.of(context).size.width,
+      child: cfpFormat(context),
     );
   }
 }
