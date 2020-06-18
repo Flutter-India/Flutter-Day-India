@@ -73,11 +73,8 @@ flutter:
   fonts:
     - family: Product Sans
       fonts:
-        - asset: assets/fonts/ProductSans.ttf
-    - family: Rocky Billy
-      fonts:
-        - asset: assets/fonts/rockybilly.ttf
-  # fonts:
+        - asset: assets/fonts/ProductSans-Regular.ttf
+     # fonts:
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

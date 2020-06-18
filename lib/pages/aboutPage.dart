@@ -109,9 +109,9 @@ class AboutPage extends StatelessWidget {
                 ],
               ),
             ),
-            Flexible(
-              child: FlutterLogoAnimation(),
-            ),
+            // Flexible(
+            //   child: FlutterLogoAnimation(),
+            // ),
           ],
         ),
       ),
