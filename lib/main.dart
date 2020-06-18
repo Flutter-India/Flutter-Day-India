@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         canvasColor: AppInfo.backgroundColor,
         scaffoldBackgroundColor: AppInfo.backgroundColor,
+        primaryColor: Colors.white,
         textTheme: TextTheme(
           headline6: TextStyle(
             color: Colors.white,
@@ -23,7 +24,6 @@ class MyApp extends StatelessWidget {
           color: Colors.white54,
         ),
       ),
-      theme: ThemeData.dark(),
     );
   }
 }

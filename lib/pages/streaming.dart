@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutterdaysindia/services/launchString.dart';
 import 'package:flutterdaysindia/services/responsiveness.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../utils/app_info.dart';
 
@@ -27,9 +26,14 @@ class Streaming extends StatelessWidget {
           SizedBox(
             height: 50.0,
           ),
-          WebsafeSvg.asset(
-            'assets/Images/svg/youtube.svg',
-            height: Responsiveness.isSmallScreen(context) ? 50.0 : 110.0,
+          Container(
+//            child: WebsafeSvg.network(
+//              "https://cdn.worldvectorlogo.com/logos/new-youtube-logo.svg",
+//              height: Responsiveness.isSmallScreen(context) ? 50.0 : 110.0,
+//            ),
+            child: Image.asset(
+              "assets/images/socialIcons/Youtube_Icon.png",
+            ),
           ),
           SizedBox(
             height: 70.0,

@@ -20,8 +20,8 @@ class AppInfo {
   static const organizerjson = "assets/json/organizer.json";
 
   //Social Media Icons
-  static const twitterIcon = "assets/Images/socialIcons/twitter.png";
-  static const meetupIcon = "assets/Images/socialIcons/meetup.png";
+  static const twitterIcon = "assets/images/socialIcons/twitter.png";
+  static const meetupIcon = "assets/images/socialIcons/meetup.png";
   static const facebookIcon = "assets/images/socialIcons/facebook.png";
   static const youtubeIcon = "assets/images/socialIcons/youtube.png";
   static const slackIcon = "assets/images/socialIcons/add_to_slack.png";

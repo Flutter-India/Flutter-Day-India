@@ -25,7 +25,7 @@ class AboutPage extends StatelessWidget {
 
   containerHeight(BuildContext context) {
     if (Responsiveness.isSmallScreen(context))
-      return MediaQuery.of(context).size.height / 1.7;
+      return MediaQuery.of(context).size.height;
     else if (Responsiveness.isLargeScreen(context))
       return MediaQuery.of(context).size.height / 1.5;
     else if (Responsiveness.isMediumScreen(context))
@@ -73,7 +73,7 @@ class AboutPage extends StatelessWidget {
                     text:
                         "Join us for a full 3-hours of sessions and Q&A hosted by the Flutter India Team. Leave your questions on Twitter with ",
                     style: TextStyle(
-                      color: Colors.white54,
+                      color: Colors.white,
                       fontSize: bodyFont(context: context),
                     ),
                     children: <TextSpan>[
@@ -125,11 +125,11 @@ class AboutPage extends StatelessWidget {
                   iconsize: 25.0,
                   textSize: 15.0,
                   gap: 15.0),
-              gapbody,
-              addToCalendar(
-                context: context,
-                fontsize: 13.0,
-              ),
+//              gapbody,
+//              addToCalendar(
+//                context: context,
+//                fontsize: 13.0,
+//              ),
             ],
           )
         : Row(
@@ -269,6 +269,7 @@ class AboutPage extends StatelessWidget {
         Icon(
           iconData,
           size: iconsize,
+          color: Colors.white,
         ),
         SizedBox(
           width: gap,
@@ -277,6 +278,7 @@ class AboutPage extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: textSize,
+            color: Colors.white,
           ),
         ),
       ],
@@ -295,8 +297,11 @@ class studyWidget extends StatelessWidget {
       return Container(
         child: Column(
           children: [
-            Image.asset(
-              "assets/animations/study.gif",
+            Container(
+              height: 300.0,
+              child: Image.asset(
+                "assets/animations/study.gif",
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -304,6 +309,7 @@ class studyWidget extends StatelessWidget {
                 "Join us from anywhere around the world. This is a 100% virtual and free conference.\nWe are excited to see you!",
                 style: TextStyle(
                   fontSize: 17.0,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -326,6 +332,7 @@ class studyWidget extends StatelessWidget {
                 "Join us from anywhere around the world. This is a 100% virtual and free conference.\nWe are excited to see you!",
                 style: TextStyle(
                   fontSize: 30.0,
+                  color: Colors.white,
                 ),
               ),
             ),

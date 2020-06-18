@@ -22,6 +22,7 @@ class Updates extends StatelessWidget {
             "Stay tuned for more updates",
             style: TextStyle(
               fontSize: updateFont(context),
+              color: Colors.white,
             ),
           ),
           SizedBox(
