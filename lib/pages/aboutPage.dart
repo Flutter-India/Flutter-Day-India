@@ -30,7 +30,7 @@ class AboutPage extends StatelessWidget {
 
   containerHeight(BuildContext context) {
     if (Responsiveness.isSmallScreen(context))
-      return MediaQuery.of(context).size.height;
+      return MediaQuery.of(context).size.height / 2;
     else if (Responsiveness.isLargeScreen(context))
       return MediaQuery.of(context).size.height / 1.5;
     else if (Responsiveness.isMediumScreen(context))
@@ -40,8 +40,6 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: containerHeight(context),
-      width: MediaQuery.of(context).size.width,
       child: Padding(
         padding: const EdgeInsets.only(left: 35.0),
         child: aboutPageFormat(context: context),
@@ -304,7 +302,7 @@ class studyWidget extends StatelessWidget {
           children: [
             Container(
               height: Responsiveness.isSmallScreen(context)
-                  ? 100
+                  ? 200
                   : Responsiveness.isMediumScreen(context) ? 150.0 : 300,
               child: Image.asset(
                 "assets/animations/study.gif",
@@ -325,7 +323,6 @@ class studyWidget extends StatelessWidget {
       );
     } else {
       return Container(
-        height: MediaQuery.of(context).size.height / 4,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           mainAxisSize: MainAxisSize.max,

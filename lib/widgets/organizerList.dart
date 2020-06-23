@@ -39,12 +39,16 @@ class _OrganizerListState extends State<OrganizerList> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Text(
-                      new_Data[index]["organizer_name"],
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize:
-                            Responsiveness.isSmallScreen(context) ? 27.0 : 35.0,
+                    Center(
+                      child: Text(
+                        new_Data[index]["organizer_name"],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: Responsiveness.isSmallScreen(context)
+                              ? 27.0
+                              : 35.0,
+                        ),
                       ),
                     ),
                     SizedBox(
