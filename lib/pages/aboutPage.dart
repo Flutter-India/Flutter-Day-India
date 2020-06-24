@@ -53,6 +53,7 @@ class AboutPage extends StatelessWidget {
 
   aboutPageFormat({BuildContext context}) {
     double headerfont = Responsiveness.isSmallScreen(context) ? 25.0 : 55.0;
+    double imgSize = 525.0;
     return Responsiveness.isSmallScreen(context)
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,7 +117,7 @@ class AboutPage extends StatelessWidget {
               gapbody(context),
               timeandloc(
                 iconData: Icons.access_time,
-                title: "3-hour starting from 10:30 am",
+                title: "3-hour starting from 10:00 am IST",
                 iconsize: 25.0,
                 textSize: 15.0,
                 gap: 15.0,
@@ -128,110 +129,172 @@ class AboutPage extends StatelessWidget {
                   iconsize: 25.0,
                   textSize: 15.0,
                   gap: 15.0),
-//              gapbody,
-//              addToCalendar(
-//                context: context,
-//                fontsize: 13.0,
-//              ),
+              gapbody(context),
+              addToCalendar(
+                context: context,
+                fontsize: 13.0,
+              ),
             ],
           )
-        : Row(
+        : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              gapHeader,
+              Padding(
+                padding: const EdgeInsets.only(left: 40.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Flutter Day India is June 27, 2020!",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: headerfont,
-                                ),
-                              ),
-                              gapbody(context),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 15.0),
-                                child: RichText(
-                                  softWrap: true,
-                                  textAlign: TextAlign.justify,
-                                  text: TextSpan(
-                                    text:
-                                        "Join us for a full 3-hours of sessions and Q&A hosted by the Flutter India Team. Leave your questions on Twitter with ",
-                                    style: TextStyle(
-                                      color: Colors.white54,
-                                      fontSize: bodyFont(context: context),
-                                    ),
-                                    children: <TextSpan>[
-                                      TextSpan(
-                                        text: "#AskFlutterIndia",
-                                        style: TextStyle(
-                                          color: Colors.blue,
-                                          decoration: TextDecoration.underline,
-                                        ),
-                                        recognizer: TapGestureRecognizer()
-                                          ..onTap = () => Launch.launchUrl(
-                                                AppInfo.twitterHandle,
-                                              ),
-                                      ),
-                                      TextSpan(
-                                        text:
-                                            " and we'll answer them during the show.",
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Flexible(
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: WebsafeSvg.asset(
-                              "assets/images/svg/flutterdayIndia.svg",
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "Flutter Day India is June 27, 2020!",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: headerfont,
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    gapHeader,
-                    Text(
-                      "When and Where",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize:
-                            Responsiveness.isSmallScreen(context) ? 25.0 : 55.0,
+                          gapbody(context),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 15.0),
+                            child: RichText(
+                              softWrap: true,
+                              textAlign: TextAlign.justify,
+                              text: TextSpan(
+                                text:
+                                    "Join us for a full 3-hours of sessions and Q&A hosted by the Flutter India Team. Leave your questions on Twitter with ",
+                                style: TextStyle(
+                                  color: Colors.white54,
+                                  fontSize: bodyFont(context: context),
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: "#AskFlutterIndia",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      decoration: TextDecoration.underline,
+                                    ),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () => Launch.launchUrl(
+                                            AppInfo.twitterHandle,
+                                          ),
+                                  ),
+                                  TextSpan(
+                                    text:
+                                        " and we'll answer them during the show.",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    gapbody(context),
-                    timeandloc(
-                      iconData: Icons.access_time,
-                      title: "3-hour starting from 10:30 am",
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: WebsafeSvg.asset(
+                          "assets/images/svg/flutterdayIndia.svg",
+                        ),
+                      ),
                     ),
-                    gapbody(context),
-                    timeandloc(
-                      iconData: Icons.location_on,
-                      title: "flutterindia.dev",
-                    ),
-//                    gapbody,
-//                    addToCalendar(
-//                      context: context,
-//                      fontsize: 20.0,
-//                    ),
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(left: 40.0),
+                child: Row(
+                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "When and Where",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: Responsiveness.isSmallScreen(context)
+                                  ? 25.0
+                                  : 55.0,
+                            ),
+                          ),
+                          gapbody(context),
+                          timeandloc(
+                            iconData: Icons.access_time,
+                            title: "3-hour starting from 10:00 am IST",
+                          ),
+                          gapbody(context),
+                          timeandloc(
+                            iconData: Icons.location_on,
+                            title: "flutterindia.dev",
+                          ),
+                          gapbody(context),
+                          addToCalendar(
+                            context: context,
+                            fontsize: 20.0,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Flexible(
+                      child: Container(
+                        width: imgSize,
+                        height: imgSize,
+                        child: Image.asset(
+                          "assets/animations/mypersonalLogo.gif",
+                          fit: BoxFit.scaleDown,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+//                    Row(
+//                      children: <Widget>[
+//                        Column(
+//                          crossAxisAlignment: CrossAxisAlignment.start,
+//                          children: <Widget>[
+//                            Text(
+//                              "When and Where",
+//                              style: TextStyle(
+//                                color: Colors.white,
+//                                fontSize: Responsiveness.isSmallScreen(context)
+//                                    ? 25.0
+//                                    : 55.0,
+//                              ),
+//                            ),
+//                            gapbody(context),
+//                            timeandloc(
+//                              iconData: Icons.access_time,
+//                              title: "3-hour starting from 10:00 am IST",
+//                            ),
+//                            gapbody(context),
+//                            timeandloc(
+//                              iconData: Icons.location_on,
+//                              title: "flutterindia.dev",
+//                            ),
+//                            gapbody(context),
+//                            addToCalendar(
+//                              context: context,
+//                              fontsize: 20.0,
+//                            ),
+//                          ],
+//                        ),
+//                      ],
+//                    ),
             ],
           );
   }
@@ -247,15 +310,12 @@ class AboutPage extends StatelessWidget {
           ),
           children: <TextSpan>[
             TextSpan(
-              text: " Google Calendar",
-              style: TextStyle(color: Colors.white),
-              recognizer: TapGestureRecognizer()..onTap = () {},
-            ),
-            TextSpan(text: " | "),
-            TextSpan(
-              text: "iCalendar",
-              style: TextStyle(color: Colors.white),
-              recognizer: TapGestureRecognizer()..onTap = () {},
+              text: " Calendar",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () => Launch.launchUrl("https://bit.ly/3fRitu3"),
             ),
           ]),
     );

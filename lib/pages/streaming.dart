@@ -49,10 +49,10 @@ class Streaming extends StatelessWidget {
             child: RaisedButton(
               color: Color(0xffFF0000),
               onPressed: () => Launch.launchUrl(
-                AppInfo.youtubeHandle,
+                AppInfo.youtubeVideoLink,
               ),
               child: Text(
-                "Subscribe",
+                "Watch Live",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: Responsiveness.isSmallScreen(context) ? 20.0 : 45.0,

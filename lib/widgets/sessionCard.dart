@@ -81,7 +81,6 @@ class sessionCard extends StatelessWidget {
       );
     } else if (Responsiveness.isMediumScreen(context)) {
       return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
@@ -145,68 +144,73 @@ class sessionCard extends StatelessWidget {
         ],
       );
     } else if (Responsiveness.isLargeScreen(context)) {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Center(
+      return Padding(
+        padding: const EdgeInsets.only(
+          right: 40.0,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      time,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30.0,
+                      ),
+                    ),
+                    gap,
+                    SizedBox(
+                      width: 115.0,
+                      child: Divider(
+                        thickness: 5.0,
+                        color: Color(0xff2DB7F6),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    time,
+                    sessionTitle,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30.0,
+                      fontSize: 35.0,
                     ),
                   ),
                   gap,
-                  SizedBox(
-                    width: 115.0,
-                    child: Divider(
-                      thickness: 5.0,
+                  Text(
+                    speakerName,
+                    style: TextStyle(
                       color: Color(0xff2DB7F6),
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.w100,
+                    ),
+                  ),
+                  gap,
+                  Text(
+                    sessionDescription,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 20.0,
                     ),
                   ),
                 ],
               ),
             ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  sessionTitle,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35.0,
-                  ),
-                ),
-                gap,
-                Text(
-                  speakerName,
-                  style: TextStyle(
-                    color: Color(0xff2DB7F6),
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.w100,
-                  ),
-                ),
-                gap,
-                Text(
-                  sessionDescription,
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 20.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       );
     }
   }

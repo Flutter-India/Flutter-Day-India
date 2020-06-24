@@ -24,7 +24,7 @@ class ScheduleScreen extends StatelessWidget {
           style: GoogleFonts.roboto(color: Colors.white, fontSize: 50.0),
         ),
         SizedBox(
-          height: 20.0,
+          height: 40.0,
         ),
         LargeScreenSchedule()
       ],
@@ -40,11 +40,12 @@ class LargeScreenSchedule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         sessionCard(
           time: "10:00AM - IST",
           sessionTitle: "Keynote",
-          speakerName: 'Vivek Yadav',
+          speakerName: 'Flutter India',
           speakerUrl: "https://twitter.com/viveky259259",
           sessionDescription:
               "What is Flutter Day? And what are we doing on your screen today? Fitz kicks off the day and sets the stage for what to expect.",
@@ -61,11 +62,16 @@ class LargeScreenSchedule extends StatelessWidget {
         gap,
         sessionCard(
           time: "11:00AM - IST",
-          sessionTitle: "Going back to Basics [Dart Touch & Gestures]",
-          speakerName: "Make Stories Team",
-          speakerUrl: "https://twitter.com/GhelaPratik",
+//          sessionTitle: "Going back to Basics [Dart Touch & Gestures]",
+//          speakerName: "Make Stories Team",
+//          speakerUrl: "https://twitter.com/GhelaPratik",
+//          sessionDescription:
+//              "Join Pratik, Yash, and Anil to discover how you can make Flutter Applications interactive using Gestures, Drag, and Resizable Properties using the Default touch class of dart library.",
+          sessionTitle: "Flutter Apps powered by GraphQL with Hasura",
+          speakerName: "Sivamuthu Kumar",
+          speakerUrl: "https://twitter.com/ksivamuthu",
           sessionDescription:
-              "Flutter provides a variety of widgets through which we can build any kind of UI. But more than a design, your app should be interactive to give an experience that users just fall in love with. At MakeStories, user experience matters a lot as we are a design tool for stories. One such requirement popped up when we had to create an experience for dragging, resizing, tapping and much more. That’s when we used the default touch class of Dart Library. We could have used Gestures that represent semantic actions (for example, tap, drag, and scale) that are recognized from multiple individual pointer events, potentially even multiple individual pointers. Gestures can dispatch multiple events, corresponding to the lifecycle of the gesture (for example, drag start, drag update, and drag end).In our apps we use Gestures, Drag, Resizeable properties and add some methods for taping like ontap, stack, active, inactive, onDrag, rotation of widgets and we are also play with states, height, width in flutter.GestureDetector Allows only one function on the widget at a time either dragging or scaling but we need both of these function on same widget in our project so we have used default touch class of dart library to achieve both dragging and scaling on same widget",
+              "Modern applications are increasingly data-driven, which leads to a lot of time spent fetching, filtering, and aggregating data. GraphQL is a query language for your API which reduces the complexity associated with data fetching lets developers describe the complex, nested data dependencies of modern applications. In this session, We will discuss how to build high-performance GraphQL apps with Flutter and the demo how to quickly spin up the GraphQL server with Hasura and integrate the GraphQL backend in Flutter using GraphQL Client libraries, featuring GraphQL capabilities such as Query, Mutation, and Subscription. We will discuss tips and tricks to getting started with building GraphQL powered Flutter apps.",
         ),
         gap,
         sessionCard(
@@ -73,8 +79,7 @@ class LargeScreenSchedule extends StatelessWidget {
           sessionTitle: "Kahoot",
           speakerName: "Flutter India",
           speakerUrl: "https://twitter.com/IndiaFlutter",
-          sessionDescription:
-              "Fun Time!",
+          sessionDescription: "Fun Time!",
         ),
         gap,
         sessionCard(
@@ -82,8 +87,8 @@ class LargeScreenSchedule extends StatelessWidget {
           sessionTitle: "Skyrocket your performance with Background Tasks",
           speakerName: "Max Weber",
           speakerUrl: "https://twitter.com/flutter_exp",
-          sessionDescription: "",
-         // "Background Tasks are a main capability of Flutter to reduce the load of the main thread, and you can do heavy calculations on a different Isolate. Isolates gives us the option to do tasks behind the scenes, and it is also possible to bring your app to sleep.",
+          sessionDescription:
+              "Background Tasks are a main capability of Flutter to reduce the load of the main thread, and you can do heavy calculations on a different Isolate. Isolates gives us the option to do tasks behind the scenes, and it is also possible to bring your app to sleep.",
         ),
         gap,
         sessionCard(
@@ -91,17 +96,17 @@ class LargeScreenSchedule extends StatelessWidget {
           sessionTitle: "Kahoot",
           speakerName: "Flutter India",
           speakerUrl: "https://twitter.com/IndiaFlutter",
-          sessionDescription:
-          "Fun Time!",
+          sessionDescription: "Fun Time!",
         ),
         gap,
         sessionCard(
           time: "12:30PM - IST",
-          sessionTitle: "Get_It in action - make your life easier with a Service Locator",
+          sessionTitle:
+              "Get_It in action - make your life easier with a Service Locator",
           speakerName: "Thomas Burkhart",
           speakerUrl: "https://twitter.com/ThomasBurkhartB",
           sessionDescription:
-          "Although Provider is the most promoted way to access your business logic from your UI, get_it has a large 'underground' fan group as an alternative. This talk will show you why you should have a look at get_it and how you use it.",
+              "Although Provider is the most promoted way to access your business logic from your UI, get_it has a large 'underground' fan group as an alternative. This talk will show you why you should have a look at get_it and how you use it.",
         ),
         gap,
         gap,

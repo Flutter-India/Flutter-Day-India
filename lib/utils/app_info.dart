@@ -33,6 +33,7 @@ class AppInfo {
   static const String slackHandle =
       "https://join.slack.com/t/fluttercommunityindia/shared_invite/zt-ewhb1p50-6515IPymTDXRyv7Z9UbylA";
   static const String youtubeHandle = "https://www.youtube.com/flutterindia";
+  static const String youtubeVideoLink = "https://youtu.be/AORz7-0OY9k";
 
   //Google Powered By
   static const String gdgPower = "assets/images/svg/gdgpower.svg";
