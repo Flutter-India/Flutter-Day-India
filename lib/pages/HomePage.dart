@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdaysindia/pages/schedule.dart';
 
 import 'aboutPage.dart';
 import 'cfpPage.dart';
@@ -18,6 +19,7 @@ class HomePage extends StatelessWidget {
     studyWidget(),
     Streaming(),
     Updates(),
+    //ScheduleScreen(),
     OrganizerScreen(),
     PoweredBy(),
     ContactUs(),

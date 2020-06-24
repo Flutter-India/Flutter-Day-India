@@ -79,11 +79,11 @@ class LargeScreenSchedule extends StatelessWidget {
         gap,
         sessionCard(
           time: "12:20PM - IST",
-          sessionTitle: "Session 2",
-          speakerName: "Andrew Brogdon",
-          speakerUrl: "https://twitter.com/viveky259259",
+          sessionTitle: "GetIt in action",
+          speakerName: "Thomas Bukhart",
+          speakerUrl: "https://twitter.com/ThomasBurkhartB",
           sessionDescription:
-              "What is Flutter Day? And what are we doing on your screen today? Fitz kicks off the day and sets the stage for what to expect.",
+              "Although Provider is the most promoted way to access your business logic from your UI, get_it got a large 'underground' fan group as an alternative. This talk will show you why you should have a look at get_it and how you use it.",
         ),
         gap,
         gap,
