@@ -26,6 +26,7 @@ The communities present under Flutter India are as follows:
 8. <a href="https://www.meetup.com/flutterngp/">Flutter Nagpur</a>
 9. <a href="https://www.meetup.com/Flutter-Hyderabad/">Flutter Hyderabad</a>
 10. <a href="https://twitter.com/flutterkerala/">Flutter Kerala</a>
+11. <a href="https://twitter.com/flutterkolkata">Flutter Kolkata</a>
 
 ## Technology Stack
 
