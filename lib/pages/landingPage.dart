@@ -9,8 +9,8 @@ class LandingPage extends StatelessWidget {
     return WebsafeSvg.asset(
       imgName,
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      fit: BoxFit.cover,
+      height: MediaQuery.of(context).size.height*1.1,
+      fit: BoxFit.fitWidth,
     );
   }
 

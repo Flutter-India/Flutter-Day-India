@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdaysindia/pages/schedule.dart';
+import 'package:flutterdaysindia/pages/speakerInfo.dart';
 
 import 'aboutPage.dart';
 import 'cfpPage.dart';
@@ -18,8 +19,8 @@ class HomePage extends StatelessWidget {
     AboutPage(),
     studyWidget(),
     Streaming(),
-    Updates(),
-    //ScheduleScreen(),
+    ScheduleScreen(),
+    SpeakerInfo(),
     OrganizerScreen(),
     PoweredBy(),
     ContactUs(),

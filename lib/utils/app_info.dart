@@ -21,6 +21,7 @@ class AppInfo {
 
   //Social Media Icons
   static const twitterIcon = "assets/images/socialIcons/twitter.png";
+  static const linkdinIcon = "assets/images/svg/LinkdIn.svg";
   static const meetupIcon = "assets/images/socialIcons/meetup.png";
   static const facebookIcon = "assets/images/socialIcons/facebook.png";
   static const youtubeIcon = "assets/images/socialIcons/youtube.png";

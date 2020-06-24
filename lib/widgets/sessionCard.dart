@@ -23,7 +23,7 @@ class sessionCard extends StatelessWidget {
         assert(speakerUrl != null);
 
   Widget gap = SizedBox(
-    height: 5.0,
+    height: 15.0,
   );
 
   Widget cardSize({BuildContext context}) {
@@ -51,7 +51,7 @@ class sessionCard extends StatelessWidget {
             sessionTitle,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 17.0,
+              fontSize: 16.0,
             ),
           ),
           gap,
@@ -59,8 +59,9 @@ class sessionCard extends StatelessWidget {
             text: TextSpan(
               text: speakerName,
               style: TextStyle(
-                color: Colors.white70,
+                color: Color(0xff008DFF),
                 fontSize: 15.0,
+                fontWeight: FontWeight.w100,
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () => Launch.launchUrl(
@@ -125,8 +126,9 @@ class sessionCard extends StatelessWidget {
                 Text(
                   speakerName,
                   style: TextStyle(
-                    color: Colors.white70,
+                    color: Color(0xff2DB7F6),
                     fontSize: 23.0,
+                    fontWeight: FontWeight.w100,
                   ),
                 ),
                 gap,
@@ -181,15 +183,16 @@ class sessionCard extends StatelessWidget {
                   sessionTitle,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 40.0,
+                    fontSize: 35.0,
                   ),
                 ),
                 gap,
                 Text(
                   speakerName,
                   style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 25.0,
+                    color: Color(0xff2DB7F6),
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.w100,
                   ),
                 ),
                 gap,
