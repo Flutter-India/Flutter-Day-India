@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterdaysindia/services/launchString.dart';
+import 'package:flutterdaysindia/services/responsiveness.dart';
 import 'package:flutterdaysindia/utils/app_info.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
@@ -11,17 +12,32 @@ class SpeakerInfoCard extends StatelessWidget {
   final String speakerTwitterHandle;
   final String speakerLinkdinHandle;
 
-  SpeakerInfoCard({Key key, this.speakerImg, this.speakerName, this.speakerPos, this.speakerTwitterHandle, this.speakerLinkdinHandle});
+  SpeakerInfoCard(
+      {Key key,
+      this.speakerImg,
+      this.speakerName,
+      this.speakerPos,
+      this.speakerTwitterHandle,
+      this.speakerLinkdinHandle});
 
   @override
   Widget build(BuildContext context) {
+    double imageDimension(context) {
+      if (Responsiveness.isLargeScreen(context))
+        return 300;
+      else if (Responsiveness.isMediumScreen(context))
+        return 250;
+      else if (Responsiveness.isSmallScreen(context))
+        return 150;
+    }
+    
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Column(
         children: [
           Container(
-            height: 300.0,
-            width: 300.0,
+            height: imageDimension(context),
+            width: imageDimension(context),
             child: CachedNetworkImage(
               imageUrl: speakerImg,
               fit: BoxFit.fill,

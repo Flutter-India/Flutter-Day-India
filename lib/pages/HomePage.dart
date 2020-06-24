@@ -15,12 +15,11 @@ import 'updates.dart';
 class HomePage extends StatelessWidget {
   List<Widget> buildList = [
     LandingPage(),
-    CFPPage(),
     AboutPage(),
     studyWidget(),
     Streaming(),
-    ScheduleScreen(),
     SpeakerInfo(),
+    ScheduleScreen(),
     OrganizerScreen(),
     PoweredBy(),
     ContactUs(),

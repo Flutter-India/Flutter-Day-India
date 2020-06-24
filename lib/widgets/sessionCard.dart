@@ -19,7 +19,6 @@ class sessionCard extends StatelessWidget {
   })  : assert(time != null),
         assert(sessionTitle != null),
         assert(speakerName != null),
-        assert(sessionDescription != null),
         assert(speakerUrl != null);
 
   Widget gap = SizedBox(

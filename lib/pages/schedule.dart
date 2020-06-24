@@ -82,8 +82,8 @@ class LargeScreenSchedule extends StatelessWidget {
           sessionTitle: "Skyrocket your performance with Background Tasks",
           speakerName: "Max Weber",
           speakerUrl: "https://twitter.com/flutter_exp",
-          sessionDescription:
-          "Background Tasks are a main capability of Flutter to reduce the load of the main thread, and you can do heavy calculations on a different Isolate. Isolates gives us the option to do tasks behind the scenes, and it is also possible to bring your app to sleep.",
+          sessionDescription: "",
+         // "Background Tasks are a main capability of Flutter to reduce the load of the main thread, and you can do heavy calculations on a different Isolate. Isolates gives us the option to do tasks behind the scenes, and it is also possible to bring your app to sleep.",
         ),
         gap,
         sessionCard(
