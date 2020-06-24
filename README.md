@@ -32,5 +32,51 @@ The communities present under Flutter India are as follows:
 - Flutter
 - Firebase
 
+## Getting Started
+
+1. [Fork repository](https://github.com/elaishane/Flutter-India-Website/fork) and clone your fork locally
+2. Install [Flutter](https://flutter.dev/docs/get-started/install)
+3. Install [Android Studio / IntelliJ / VSCode](https://flutter.dev/docs/development/tools/android-studio)
+
+## Contributing
+
+Awesome! Contributions of all kinds are greatly appreciated. To help smoothen the process we have a few non-exhaustive guidelines to follow which should get you going in no time.
+
+### Using GitHub Issues
+
+- Feel free to use GitHub issues for questions, bug reports, and feature requests
+- Use the search feature to check for an existing issue
+- Include as much information as possible and provide any relevant resources (Eg. screenshots)
+- For bug reports ensure you have a reproducible test case
+  - A pull request with a breaking test would be super preferable here but isn't required
+
+### Submitting a Pull Request
+
+- Squash commits
+- Lint your code with eslint (config provided)
+- Include relevant test updates/additions
+
+## Contributors
+
+[Yash Adulkar](https://github.com/elaishane)
+
+[Aditya Sutar](https://github.com/aditya305)
+
+[Sunny Prasad]()
+
+## License
+
+Project is published under [BSD 3-Clause License](LICENSE).
+
+## Learning Resources
+A few resources to get you started if this is your first Flutter project:
+
+* [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+* [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view Flutter
+[online documentation](https://flutter.dev/docs), which offers tutorials, 
+samples, guidance on mobile development, and a full API reference.
+
 
 
