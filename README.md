@@ -62,7 +62,7 @@ Awesome! Contributions of all kinds are greatly appreciated. To help smoothen th
 
 [Aditya Sutar](https://github.com/aditya305)
 
-[Sunny Prasad]()
+[Sunny Prasad](https://github.com/prasadsunny1)
 
 ## License
 
