@@ -66,7 +66,7 @@ class SpeakerInfo extends StatelessWidget {
             children: [
               SpeakerInfoCard(
                 speakerImg:
-                    "https://pbs.twimg.com/profile_images/1228734698379259905/-EJ8KGjL_400x400.jpg",
+                    "https://pbs.twimg.com/profile_images/1289306904842440706/WOLMG_L-_400x400.jpg",
                 speakerName: "Sivamuthu Kumar",
                 speakerPos: "Architect, Computer Enterprises Inc",
                 speakerTwitterHandle: "https://twitter.com/ksivamuthu",
@@ -137,6 +137,15 @@ class SpeakerInfo extends StatelessWidget {
                 "https://www.linkedin.com/in/thomas-burkhart-113767176/",
           ),
           gap,
+          SpeakerInfoCard(
+                speakerImg:
+                    "https://pbs.twimg.com/profile_images/1289306904842440706/WOLMG_L-_400x400.jpg",
+                speakerName: "Sivamuthu Kumar",
+                speakerPos: "Architect, Computer Enterprises Inc",
+                speakerTwitterHandle: "https://twitter.com/ksivamuthu",
+                speakerLinkdinHandle: "https://www.linkedin.com/in/ksivamuthu",
+              ),
+          gap,
           gap,
         ],
       );
@@ -180,6 +189,15 @@ class SpeakerInfo extends StatelessWidget {
             speakerLinkdinHandle:
                 "https://www.linkedin.com/in/thomas-burkhart-113767176/",
           ),
+          gap,
+          SpeakerInfoCard(
+                speakerImg:
+                    "https://pbs.twimg.com/profile_images/1289306904842440706/WOLMG_L-_400x400.jpg",
+                speakerName: "Sivamuthu Kumar",
+                speakerPos: "Architect, Computer Enterprises Inc",
+                speakerTwitterHandle: "https://twitter.com/ksivamuthu",
+                speakerLinkdinHandle: "https://www.linkedin.com/in/ksivamuthu",
+              ),
           gap,
           gap,
         ],
