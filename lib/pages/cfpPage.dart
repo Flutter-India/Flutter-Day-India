@@ -10,20 +10,20 @@ class CFPPage extends StatelessWidget {
     height: 50.0,
   );
 
-  containerHeight({BuildContext context}) {
+  containerHeight({required BuildContext context}) {
     return Responsiveness.isSmallScreen(context)
         ? MediaQuery.of(context).size.height / 1.5
         : MediaQuery.of(context).size.height / 2;
   }
 
-  Image cfpImage({BuildContext context}) {
+  Image cfpImage({required BuildContext context}) {
     return Image.asset(
       "assets/animations/mypersonalLogo.gif",
       width: MediaQuery.of(context).size.width / 2,
     );
   }
 
-  Text HeaderText({BuildContext context}) {
+  Text HeaderText({required BuildContext context}) {
     String text = Responsiveness.isSmallScreen(context)
         ? "Speak at Flutter Day India"
         : "Speak at\nFlutter Day India";
@@ -38,12 +38,12 @@ class CFPPage extends StatelessWidget {
     );
   }
 
-  double HeaderFont({BuildContext context}) {
+  double HeaderFont({required BuildContext context}) {
     if (Responsiveness.isLargeScreen(context)) {
       return 70.0;
     } else if (Responsiveness.isMediumScreen(context)) {
       return 47.0;
-    } else if (Responsiveness.isSmallScreen(context)) {
+    } else {
       return 23.0;
     }
   }
