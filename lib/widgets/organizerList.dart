@@ -15,7 +15,7 @@ class OrganizerList extends StatefulWidget {
 
 class _OrganizerListState extends State<OrganizerList> {
   var new_Data;
-  List<Widget> widgets;
+  late List<Widget> widgets;
   Widget gap = SizedBox(
     width: 15.0,
   );
@@ -24,7 +24,7 @@ class _OrganizerListState extends State<OrganizerList> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
       String jsonData = await rootBundle.loadString(AppInfo.organizerjson);
       new_Data = json.decode(jsonData.toString());
       print(new_Data);
@@ -98,7 +98,7 @@ class _OrganizerListState extends State<OrganizerList> {
   }
 }
 
-ImageProvider CircleLogo(String string) {
+ImageProvider CircleLogo(String? string) {
   String defaultLogoUrl =
       "https://miro.medium.com/max/1000/1*ilC2Aqp5sZd1wi0CopD1Hw.png";
 
