@@ -6,7 +6,7 @@
  
  <p align="center">
 <a href="#getting-started">:rocket:Get Started</a>
- <a href="https://flutterindia.dev/#/">&#127760 Website</a>
+ <a href="https://flutter-india.github.io/flutter-india-day/#/">&#127760 Website</a>
 </p>
 
 ## Overview
