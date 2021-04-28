@@ -5,7 +5,7 @@ import 'package:flutterdaysindia/utils/app_info.dart';
 
 class ContactUs extends StatelessWidget {
   const ContactUs({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -90,9 +90,9 @@ class ContactUs extends StatelessWidget {
   }
 
   GestureDetector socialIcon(
-      {String url, String iconPath, BuildContext context}) {
+      {String? url, required String iconPath, required BuildContext context}) {
     return GestureDetector(
-      onTap: () => Launch.launchUrl(url),
+      onTap: () => Launch.launchUrl(url!),
       child: CircleAvatar(
         radius: Responsiveness.isSmallScreen(context) ? 25.0 : 35.0,
         backgroundImage: AssetImage(iconPath),
