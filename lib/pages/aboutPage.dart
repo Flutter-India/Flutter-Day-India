@@ -10,7 +10,9 @@ class AboutPage extends StatelessWidget {
     return SizedBox(
       height: Responsiveness.isSmallScreen(context)
           ? 30.0
-          : Responsiveness.isMediumScreen(context) ? 15.0 : 30.0,
+          : Responsiveness.isMediumScreen(context)
+              ? 15.0
+              : 30.0,
     );
   }
 
@@ -18,12 +20,12 @@ class AboutPage extends StatelessWidget {
     height: 70.0,
   );
 
-  double HeaderFont({BuildContext context}) {
+  double HeaderFont({required BuildContext context}) {
     if (Responsiveness.isLargeScreen(context)) {
       return 90.0;
     } else if (Responsiveness.isMediumScreen(context)) {
       return 47.0;
-    } else if (Responsiveness.isSmallScreen(context)) {
+    } else {
       return 40.0;
     }
   }
@@ -47,11 +49,11 @@ class AboutPage extends StatelessWidget {
     );
   }
 
-  bodyFont({BuildContext context}) {
+  bodyFont({required BuildContext context}) {
     return Responsiveness.isSmallScreen(context) ? 13.0 : 25.0;
   }
 
-  aboutPageFormat({BuildContext context}) {
+  aboutPageFormat({required BuildContext context}) {
     double headerfont = Responsiveness.isSmallScreen(context) ? 25.0 : 55.0;
     double imgSize = 525.0;
     return Responsiveness.isSmallScreen(context)
@@ -299,7 +301,7 @@ class AboutPage extends StatelessWidget {
           );
   }
 
-  RichText addToCalendar({BuildContext context, double fontsize = 20.0}) {
+  RichText addToCalendar({BuildContext? context, double fontsize = 20.0}) {
     return RichText(
       text: TextSpan(
           text: "Add to ",
@@ -322,8 +324,8 @@ class AboutPage extends StatelessWidget {
   }
 
   Row timeandloc(
-      {IconData iconData,
-      String title,
+      {IconData? iconData,
+      required String title,
       double iconsize = 30.0,
       double textSize = 25.0,
       gap = 25.0}) {
@@ -351,7 +353,7 @@ class AboutPage extends StatelessWidget {
 
 class studyWidget extends StatelessWidget {
   const studyWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -363,7 +365,9 @@ class studyWidget extends StatelessWidget {
             Container(
               height: Responsiveness.isSmallScreen(context)
                   ? 200
-                  : Responsiveness.isMediumScreen(context) ? 150.0 : 300,
+                  : Responsiveness.isMediumScreen(context)
+                      ? 150.0
+                      : 300,
               child: Image.asset(
                 "assets/animations/study.gif",
               ),
