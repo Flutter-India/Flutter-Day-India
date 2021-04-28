@@ -7,9 +7,9 @@ enum DeviceType {
 }
 
 class Responsiveness extends StatelessWidget {
-  final Widget largeScreen;
-  final Widget mediumScreen;
-  final Widget smallScreen;
+  final Widget? largeScreen;
+  final Widget? mediumScreen;
+  final Widget? smallScreen;
 
   Responsiveness({
     this.largeScreen,
@@ -35,11 +35,11 @@ class Responsiveness extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 1200) {
-          return largeScreen;
+          return largeScreen!;
         } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-          return mediumScreen ?? largeScreen;
+          return mediumScreen ?? largeScreen!;
         } else {
-          return smallScreen ?? largeScreen;
+          return smallScreen ?? largeScreen!;
         }
       },
     );
