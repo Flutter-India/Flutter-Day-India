@@ -5,22 +5,22 @@ import 'package:flutterdaysindia/utils/app_info.dart';
 
 class OrganizerMeetup extends StatelessWidget {
   OrganizerMeetup({
-    Key key,
-    @required this.string,
+    Key? key,
+    required this.string,
   }) : super(key: key);
 
-  final String string;
+  final String? string;
 
   @override
   Widget build(BuildContext context) {
-    if (string.isEmpty) {
+    if (string!.isEmpty) {
       return Container(
         width: 0.0,
         height: 0.0,
       );
     }
     return GestureDetector(
-      onTap: () => Launch.launchUrl(string),
+      onTap: () => Launch.launchUrl(string!),
       child: CircleAvatar(
         radius: Responsiveness.isSmallScreen(context) ? 23.0 : 35.0,
         backgroundImage: AssetImage(
@@ -33,23 +33,23 @@ class OrganizerMeetup extends StatelessWidget {
 }
 
 class OrganizerTwitter extends StatelessWidget {
-  final String string;
+  final String? string;
 
   const OrganizerTwitter({
-    Key key,
-    @required this.string,
+    Key? key,
+    required this.string,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if (string.isEmpty) {
+    if (string!.isEmpty) {
       return Container(
         width: 0.0,
         height: 0.0,
       );
     }
     return GestureDetector(
-      onTap: () => Launch.launchUrl(string),
+      onTap: () => Launch.launchUrl(string!),
       child: CircleAvatar(
         radius: Responsiveness.isSmallScreen(context) ? 23.0 : 35.0,
         backgroundImage: AssetImage(
