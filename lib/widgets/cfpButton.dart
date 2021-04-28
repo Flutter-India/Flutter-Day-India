@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterdaysindia/services/launchString.dart';
 
 class cfpButton extends StatelessWidget {
-  final double textSize;
+  final double? textSize;
 
   const cfpButton({this.textSize});
 
