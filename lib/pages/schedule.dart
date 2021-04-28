@@ -16,7 +16,7 @@ class ScheduleScreen extends StatelessWidget {
     );
   }
 
-  schedule({BuildContext context}) {
+  schedule({BuildContext? context}) {
     return Column(
       children: [
         Text(
