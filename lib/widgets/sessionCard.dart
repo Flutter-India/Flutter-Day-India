@@ -7,16 +7,16 @@ class sessionCard extends StatelessWidget {
   final String time;
   final String sessionTitle;
   final String speakerName;
-  final String sessionDescription;
+  final String? sessionDescription;
   final String speakerUrl;
 
   sessionCard({
-    this.time,
-    this.sessionTitle,
-    this.speakerName,
+    required this.time,
+    required this.sessionTitle,
+    required this.speakerName,
     this.sessionDescription,
-    this.speakerUrl,
-  })  : assert(time != null),
+    required this.speakerUrl,
+  })   : assert(time != null),
         assert(sessionTitle != null),
         assert(speakerName != null),
         assert(speakerUrl != null);
@@ -25,7 +25,7 @@ class sessionCard extends StatelessWidget {
     height: 15.0,
   );
 
-  Widget cardSize({BuildContext context}) {
+  Widget cardSize({required BuildContext context}) {
     if (Responsiveness.isSmallScreen(context)) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +70,7 @@ class sessionCard extends StatelessWidget {
           ),
           gap,
           Text(
-            sessionDescription,
+            sessionDescription!,
             textAlign: TextAlign.justify,
             style: TextStyle(
               color: Colors.white70,
@@ -131,7 +131,7 @@ class sessionCard extends StatelessWidget {
                 ),
                 gap,
                 Text(
-                  sessionDescription,
+                  sessionDescription!,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     color: Colors.white70,
@@ -143,7 +143,7 @@ class sessionCard extends StatelessWidget {
           ),
         ],
       );
-    } else if (Responsiveness.isLargeScreen(context)) {
+    } else {
       return Padding(
         padding: const EdgeInsets.only(
           right: 40.0,
@@ -199,7 +199,7 @@ class sessionCard extends StatelessWidget {
                   ),
                   gap,
                   Text(
-                    sessionDescription,
+                    sessionDescription!,
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                       color: Colors.white70,
