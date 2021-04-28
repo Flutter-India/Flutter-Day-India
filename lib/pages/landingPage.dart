@@ -5,11 +5,11 @@ import 'package:websafe_svg/websafe_svg.dart';
 
 class LandingPage extends StatelessWidget {
   static String tag = "/landingPage";
-  LandingCover({BuildContext context, String imgName}) {
+  LandingCover({required BuildContext context, required String imgName}) {
     return WebsafeSvg.asset(
       imgName,
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height*1.1,
+      height: MediaQuery.of(context).size.height * 1.1,
       fit: BoxFit.fitWidth,
     );
   }
@@ -20,7 +20,7 @@ class LandingPage extends StatelessWidget {
       return LandingCover(context: context, imgName: AppInfo.imagecoversvg);
     } else if (Responsiveness.isMediumScreen(context)) {
       return LandingCover(context: context, imgName: AppInfo.imagecoversvgIPAD);
-    } else if (Responsiveness.isSmallScreen(context)) {
+    } else {
       return LandingCover(
           context: context, imgName: AppInfo.imagecoversvgMobile);
     }
