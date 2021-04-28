@@ -6,14 +6,14 @@ import 'package:flutterdaysindia/utils/app_info.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class SpeakerInfoCard extends StatelessWidget {
-  final String speakerImg;
-  final String speakerName;
-  final String speakerPos;
-  final String speakerTwitterHandle;
-  final String speakerLinkdinHandle;
+  final String? speakerImg;
+  final String? speakerName;
+  final String? speakerPos;
+  final String? speakerTwitterHandle;
+  final String? speakerLinkdinHandle;
 
   SpeakerInfoCard(
-      {Key key,
+      {Key? key,
       this.speakerImg,
       this.speakerName,
       this.speakerPos,
@@ -27,10 +27,10 @@ class SpeakerInfoCard extends StatelessWidget {
         return 300;
       else if (Responsiveness.isMediumScreen(context))
         return 250;
-      else if (Responsiveness.isSmallScreen(context))
+      else
         return 150;
     }
-    
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Column(
@@ -39,7 +39,7 @@ class SpeakerInfoCard extends StatelessWidget {
             height: imageDimension(context),
             width: imageDimension(context),
             child: CachedNetworkImage(
-              imageUrl: speakerImg,
+              imageUrl: speakerImg!,
               fit: BoxFit.fill,
             ),
           ),
@@ -47,7 +47,7 @@ class SpeakerInfoCard extends StatelessWidget {
             height: 10.0,
           ),
           Text(
-            speakerName,
+            speakerName!,
             style: TextStyle(
               fontSize: 25.0,
               color: Colors.white,
@@ -57,7 +57,7 @@ class SpeakerInfoCard extends StatelessWidget {
             height: 10.0,
           ),
           Text(
-            speakerPos,
+            speakerPos!,
             style: TextStyle(
               fontSize: 20.0,
               color: Colors.white,
@@ -70,7 +70,7 @@ class SpeakerInfoCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
-                onTap: () => Launch.launchUrl(speakerTwitterHandle),
+                onTap: () => Launch.launchUrl(speakerTwitterHandle!),
                 child: Image.asset(
                   AppInfo.twitterIcon,
                   height: 50,
@@ -81,7 +81,7 @@ class SpeakerInfoCard extends StatelessWidget {
                 width: 15.0,
               ),
               InkWell(
-                onTap: () => Launch.launchUrl(speakerLinkdinHandle),
+                onTap: () => Launch.launchUrl(speakerLinkdinHandle!),
                 child: WebsafeSvg.asset(
                   AppInfo.linkdinIcon,
                   height: 50,
