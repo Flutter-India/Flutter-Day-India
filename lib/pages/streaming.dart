@@ -45,7 +45,8 @@ class Streaming extends StatelessWidget {
             ),
             height: Responsiveness.isSmallScreen(context) ? 27.0 : 75.0,
             padding: EdgeInsets.all(
-                Responsiveness.isSmallScreen(context) ? 8.0 : 16.0),
+              Responsiveness.isSmallScreen(context) ? 8.0 : 16.0,
+            ),
             child: RaisedButton(
               color: Color(0xffFF0000),
               onPressed: () => Launch.launchUrl(
