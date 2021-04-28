@@ -32,8 +32,7 @@ class SpeakerInfo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SpeakerInfoCard(
-                speakerImg:
-                    "https://pbs.twimg.com/profile_images/651444930884186112/9vlhNFlu_400x400.png",
+                speakerImg: "https://i.ibb.co/Lt0GBv9/1516326511397.jpg",
                 speakerName: "Andrew Brogdon",
                 speakerPos: "Engineer at Flutter DevRel",
                 speakerTwitterHandle: "https://twitter.com/redbrogdon",
@@ -41,8 +40,7 @@ class SpeakerInfo extends StatelessWidget {
                     "https://www.linkedin.com/in/andrewbrogdon/",
               ),
               SpeakerInfoCard(
-                speakerImg:
-                    "https://media-exp1.licdn.com/dms/image/C5603AQHdOLVMbMqung/profile-displayphoto-shrink_800_800/0?e=1598486400&v=beta&t=KJEPAExMfj-plbbTGNO3vSSfVhSBUSHfc83H7QFSRRo",
+                speakerImg: "https://i.ibb.co/Ms6j2QR/1516947049112.jpg",
                 speakerName: "Max Weber",
                 speakerPos: "Founder and YouTuber of FlutterExplained",
                 speakerTwitterHandle: "https://twitter.com/flutter_exp",
@@ -50,8 +48,7 @@ class SpeakerInfo extends StatelessWidget {
                     "https://www.linkedin.com/in/max-weber-9889a3ba/",
               ),
               SpeakerInfoCard(
-                speakerImg:
-                    "https://pbs.twimg.com/profile_images/703124108402266112/871VjZx0_400x400.jpg",
+                speakerImg: "https://i.ibb.co/dDtmsSP/1544709679737.jpg",
                 speakerName: "Thomas Burkhart",
                 speakerPos: "Flutter Developer",
                 speakerTwitterHandle: "https://twitter.com/ThomasBurkhartB",
@@ -65,31 +62,12 @@ class SpeakerInfo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SpeakerInfoCard(
-                speakerImg:
-                    "https://pbs.twimg.com/profile_images/1289306904842440706/WOLMG_L-_400x400.jpg",
+                speakerImg: "https://i.ibb.co/1rSWB1L/1613169439882.jpg",
                 speakerName: "Sivamuthu Kumar",
                 speakerPos: "Architect, Computer Enterprises Inc",
                 speakerTwitterHandle: "https://twitter.com/ksivamuthu",
                 speakerLinkdinHandle: "https://www.linkedin.com/in/ksivamuthu",
               ),
-//              SpeakerInfoCard(
-//                speakerImg:
-//                    "https://media-exp1.licdn.com/dms/image/C5603AQHdOLVMbMqung/profile-displayphoto-shrink_800_800/0?e=1598486400&v=beta&t=KJEPAExMfj-plbbTGNO3vSSfVhSBUSHfc83H7QFSRRo",
-//                speakerName: "Max Weber",
-//                speakerPos: "Founder and YouTuber of FlutterExplained",
-//                speakerTwitterHandle: "https://twitter.com/flutter_exp",
-//                speakerLinkdinHandle:
-//                    "https://www.linkedin.com/in/max-weber-9889a3ba/",
-//              ),
-//              SpeakerInfoCard(
-//                speakerImg:
-//                    "https://pbs.twimg.com/profile_images/703124108402266112/871VjZx0_400x400.jpg",
-//                speakerName: "Thomas Burkhart",
-//                speakerPos: "Flutter Developer",
-//                speakerTwitterHandle: "https://twitter.com/ThomasBurkhartB",
-//                speakerLinkdinHandle:
-//                    "https://www.linkedin.com/in/thomas-burkhart-113767176/",
-//              ),
             ],
           ),
           gap,
@@ -109,8 +87,7 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-            speakerImg:
-                "https://pbs.twimg.com/profile_images/651444930884186112/9vlhNFlu_400x400.png",
+            speakerImg: "https://i.ibb.co/Lt0GBv9/1516326511397.jpg",
             speakerName: "Andrew Brogdon",
             speakerPos: "Engineer at Flutter DevRel",
             speakerTwitterHandle: "https://twitter.com/redbrogdon",
@@ -118,8 +95,7 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-            speakerImg:
-                "https://media-exp1.licdn.com/dms/image/C5603AQHdOLVMbMqung/profile-displayphoto-shrink_800_800/0?e=1598486400&v=beta&t=KJEPAExMfj-plbbTGNO3vSSfVhSBUSHfc83H7QFSRRo",
+            speakerImg: "https://i.ibb.co/Ms6j2QR/1516947049112.jpg",
             speakerName: "Max Weber",
             speakerPos: "Engineer at Flutter DevRel",
             speakerTwitterHandle: "https://twitter.com/flutter_exp",
@@ -128,8 +104,7 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-            speakerImg:
-                "https://pbs.twimg.com/profile_images/703124108402266112/871VjZx0_400x400.jpg",
+            speakerImg: "https://i.ibb.co/dDtmsSP/1544709679737.jpg",
             speakerName: "Thomas Burkhart",
             speakerPos: "Flutter Developer",
             speakerTwitterHandle: "https://twitter.com/ThomasBurkhartB",
@@ -138,18 +113,17 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-                speakerImg:
-                    "https://pbs.twimg.com/profile_images/1289306904842440706/WOLMG_L-_400x400.jpg",
-                speakerName: "Sivamuthu Kumar",
-                speakerPos: "Architect, Computer Enterprises Inc",
-                speakerTwitterHandle: "https://twitter.com/ksivamuthu",
-                speakerLinkdinHandle: "https://www.linkedin.com/in/ksivamuthu",
-              ),
+            speakerImg: "https://i.ibb.co/1rSWB1L/1613169439882.jpg",
+            speakerName: "Sivamuthu Kumar",
+            speakerPos: "Architect, Computer Enterprises Inc",
+            speakerTwitterHandle: "https://twitter.com/ksivamuthu",
+            speakerLinkdinHandle: "https://www.linkedin.com/in/ksivamuthu",
+          ),
           gap,
           gap,
         ],
       );
-    } else if (Responsiveness.isMediumScreen(context)) {
+    } else {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -162,8 +136,7 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-            speakerImg:
-                "https://pbs.twimg.com/profile_images/651444930884186112/9vlhNFlu_400x400.png",
+            speakerImg: "https://i.ibb.co/Lt0GBv9/1516326511397.jpg",
             speakerName: "Andrew Brogdon",
             speakerPos: "Engineer at Flutter DevRel",
             speakerTwitterHandle: "https://twitter.com/redbrogdon",
@@ -171,8 +144,7 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-            speakerImg:
-                "https://media-exp1.licdn.com/dms/image/C5603AQHdOLVMbMqung/profile-displayphoto-shrink_800_800/0?e=1598486400&v=beta&t=KJEPAExMfj-plbbTGNO3vSSfVhSBUSHfc83H7QFSRRo",
+            speakerImg: "https://i.ibb.co/Ms6j2QR/1516947049112.jpg",
             speakerName: "Max Weber",
             speakerPos: "Engineer at Flutter DevRel",
             speakerTwitterHandle: "https://twitter.com/flutter_exp",
@@ -181,8 +153,7 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-            speakerImg:
-                "https://pbs.twimg.com/profile_images/703124108402266112/871VjZx0_400x400.jpg",
+            speakerImg: "https://i.ibb.co/dDtmsSP/1544709679737.jpg",
             speakerName: "Thomas Burkhart",
             speakerPos: "Flutter Developer",
             speakerTwitterHandle: "https://twitter.com/ThomasBurkhartB",
@@ -191,13 +162,12 @@ class SpeakerInfo extends StatelessWidget {
           ),
           gap,
           SpeakerInfoCard(
-                speakerImg:
-                    "https://pbs.twimg.com/profile_images/1289306904842440706/WOLMG_L-_400x400.jpg",
-                speakerName: "Sivamuthu Kumar",
-                speakerPos: "Architect, Computer Enterprises Inc",
-                speakerTwitterHandle: "https://twitter.com/ksivamuthu",
-                speakerLinkdinHandle: "https://www.linkedin.com/in/ksivamuthu",
-              ),
+            speakerImg: "https://i.ibb.co/1rSWB1L/1613169439882.jpg",
+            speakerName: "Sivamuthu Kumar",
+            speakerPos: "Architect, Computer Enterprises Inc",
+            speakerTwitterHandle: "https://twitter.com/ksivamuthu",
+            speakerLinkdinHandle: "https://www.linkedin.com/in/ksivamuthu",
+          ),
           gap,
           gap,
         ],
