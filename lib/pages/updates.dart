@@ -7,7 +7,8 @@ class Updates extends StatelessWidget {
       return 25.0;
     else if (Responsiveness.isLargeScreen(context))
       return 75.0;
-    else if (Responsiveness.isMediumScreen(context)) return 45.0;
+    else
+      return 45.0;
   }
 
   @override
@@ -33,7 +34,7 @@ class Updates extends StatelessWidget {
     );
   }
 
-  Image ghost({BuildContext context}) {
+  Image ghost({required BuildContext context}) {
     return Responsiveness.isSmallScreen(context)
         ? Image.asset(
             "assets/animations/ghost.gif",
